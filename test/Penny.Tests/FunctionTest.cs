@@ -22,7 +22,7 @@ namespace Penny.Tests
             var context = new TestLambdaContext();
             var upperCase = function.FunctionHandler("hello world", context);
 
-            Assert.Equal("HELLO WORLD", upperCase);
+            Assert.Equal("I Love HELLO WORLD", upperCase);
         }
     }
 }
