@@ -24,7 +24,6 @@ jobs:
     - name: Test
       run: dotnet test test/Penny.Tests/
 
-    steps:
     - name: Hello world action step
       id: hello
       uses: adriancheong/hello-world-docker-action@v1
