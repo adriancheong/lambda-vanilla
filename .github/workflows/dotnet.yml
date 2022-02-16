@@ -8,22 +8,21 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    # - uses: actions/checkout@v2
-    # - name: Setup .NET
-    #   uses: actions/setup-dotnet@v1
-    #   with:
-    #     dotnet-version: 3.1.x
-    # - name: Restore dependencies
-    #   run: dotnet restore src/Penny/
-    # - name: Build
-    #   run: dotnet build src/Penny/
-    # - name: Test
-    #   run: dotnet test test/Penny.Tests/
-
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+    - name: Restore dependencies
+      run: dotnet restore src/Penny/
+    - name: Build
+      run: dotnet build src/Penny/
+    - name: Test
+      run: dotnet test test/Penny.Tests/
+  customAction:
+    steps:
     - name: Hello world action step
       id: hello
       uses: adriancheong/hello-world-docker-action@v1
@@ -31,7 +30,4 @@ jobs:
         who_to_greet: 'Penny the Meow Kia'
     # Use the output from the `hello` step
     - name: Get the output time
-      run: |
-        echo "The time was ${{ steps.hello.outputs.time }}"
-        echo "The hardcoded1 output is ${{ steps.hello.outputs.hardcoded1 }}"
-        echo "The hardcoded2 output is ${{ steps.hello.outputs.hardcoded2 }}"
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
