@@ -33,4 +33,5 @@ jobs:
     - name: Get the output time
       run: |
         echo "The time was ${{ steps.hello.outputs.time }}"
-        echo "The harccoded output is ${{ steps.hello.outputs.hardcoded }}"
+        echo "The hardcoded1 output is ${{ steps.hello.outputs.hardcoded1 }}"
+        echo "The hardcoded2 output is ${{ steps.hello.outputs.hardcoded2 }}"
