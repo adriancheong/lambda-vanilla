@@ -25,11 +25,11 @@ jobs:
       run: dotnet test test/Penny.Tests/
 
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: adriancheong/hello-world-docker-action@v1
-        with:
-          who-to-greet: 'Penny the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+    - name: Hello world action step
+      id: hello
+      uses: adriancheong/hello-world-docker-action@v1
+      with:
+        who-to-greet: 'Penny the Octocat'
+    # Use the output from the `hello` step
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
