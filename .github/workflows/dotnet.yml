@@ -31,6 +31,6 @@ jobs:
         who_to_greet: 'Zenny the Zictocat'
     # Use the output from the `hello` step
     - name: Get the output time
-      run:
+      run: |
         echo "The time was ${{ steps.hello.outputs.time }}"
         echo "The harccoded output is ${{ steps.hello.outputs.hardcoded }}"
